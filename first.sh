@@ -1,4 +1,5 @@
 #!/bin/bash
 echo Ahmad # This is my name
 echo Devope #This is Course
-echo " hello # world "
+echo "hello # world"
+echo "update2"
