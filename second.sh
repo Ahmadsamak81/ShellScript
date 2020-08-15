@@ -45,4 +45,15 @@ touch wood.txt
  cat wood.txt
  rm wood.txt
  : > wood.txt
-				   
+#/////////////////////////
+echo \"{test1,test2,test3}\"   # out "test1" "test2" "test3"
+echo \${test1,test2,test3}\$   # out $test1$ $test2$ $test3$
+#////////////////////////
+touch t.txt
+touch e.txt
+echo "wwwwwww" > t.txt
+echo "eeeeeee" > e.txt
+cat {t.txt,e.txt} > test00.txt  # add t,e to test00 one way
+cat test00.txt
+#////////////////////////
+echo {0..9} # print 0 1 2 3 4 5 6 7 8 9 
