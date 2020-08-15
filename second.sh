@@ -7,7 +7,16 @@ then :
 else
 echo $var
 fi
-#/////////////////////////////////////////////////
+#///////////////////////////
+varr=0
+if [ $varr != 0 ]
+then
+	echo "NOT"
+else
+	echo "YES"
+fi	
+
+#/////////////////////// extra //////////////////////////
 touch wood.txt
  ls
  : > wood.txt # can creat new file with empty using : > xxxx.xxx
