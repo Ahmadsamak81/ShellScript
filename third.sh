@@ -26,3 +26,30 @@ echo "My name is $0"
 echo "My first parameter is $1"
 echo "My second parameter is $2"
 echo "All parameters are $@"
+#//////////////////////////////////////
+echo "$$" #process ID
+# (htop) command view all processes
+#//////////////////////////////////////
+for n in {0..5}
+do
+	echo "BASH_VERSINFO[$n] = ${BASH_VERSINFO[$n]}"
+done
+#/////////////////////////////////////
+
+ROOT_UID=0
+if [ "$UID" -eq "ROOT_UID"  ]
+then
+	echo "root. your \$UID = $UID "
+else
+	echo "user. your \$UID = $UID "
+fi
+#///////////////// for .. loop ////////////////
+
+for i in 1 2 3
+do 
+     echo "outer loop $i ........................ "	
+	for j in 1 2 3
+	 do
+	  echo "iner loop $j ******************* "
+         done	
+done       	 
