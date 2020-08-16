@@ -52,4 +52,19 @@ do
 	 do
 	  echo "iner loop $j ******************* "
          done	
-done       	 
+done
+#///////////////////////////////////////////////
+
+declare -r PI=3.1415926   # PI only read variable -f -a -x -i 
+printf "second decimal of PI is %1.1f\n" $PI  # print x.x in decimal and new line
+#///////////////////////////////////////////////
+file=wood.txt
+echo "this line is sent to the $file" >$file
+#//////////////////////////////////////////////
+echo 12456 > fd.txt
+exec 3<>fd.txt
+read -n 1 <&3
+echo -n . >&3
+exec 3>&-
+cat fd.txt  # output 1.456
+
