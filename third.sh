@@ -60,11 +60,12 @@ printf "second decimal of PI is %1.1f\n" $PI  # print x.x in decimal and new lin
 #///////////////////////////////////////////////
 file=wood.txt
 echo "this line is sent to the $file" >$file
-#//////////////////////////////////////////////
+#//////////////////small bash script in script file///////////////
+#can execute small script sheel in the same script file 
 echo 12456 > fd.txt
-exec 3<>fd.txt
-read -n 1 <&3
-echo -n . >&3
-exec 3>&-
+exec 3<>fd.txt # read file fd.txt and sign file descriptor 3
+read -n 1 <&3 # read first character in file 3 descriptor
+echo -n . >&3 # write . in file descriptor 3
+exec 3>&- # close file descriptor ( small bash script )
 cat fd.txt  # output 1.456
 
