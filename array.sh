@@ -16,3 +16,15 @@ s=(anywordas rr) # s array contain one element
  echo ${s[0]}  # element 0
  echo ${s[1]}  # element 1
  echo ${#s[@]} # lengh array
+ #/////////////////////////
+ ar=(zero one two)
+  echo ${ar[0]}   # print first element "zero"
+  echo ${#ar[0]}  #print number character first element =4
+  echo ${#ar[*]}  #print length or number of element in array =3
+#//////////////////////////
+[ -z "$1" ] || [ ! -f "$1" ] || (rm -f "$1" ; echo "removed" ) #remove any file ex:./array.sh wood.txt 
+t=1
+y=2
+u=3
+[ "$t" -gt  "$y" ] || [ "$y" -gt "$u" ] || ( ((u += t + y)) ; echo "$u" )
+
