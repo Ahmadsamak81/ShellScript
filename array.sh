@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -v
 arr[0]=20
 arr[1]=30
 echo -e "${arr[0]} \n${arr[1]}"  # -e enable interpretation of backslash escapes
@@ -26,5 +26,5 @@ s=(anywordas rr) # s array contain one element
 t=1
 y=2
 u=3
-[ "$t" -gt  "$y" ] || [ "$y" -gt "$u" ] || ( ((u += t + y)) ; echo "$u" )
+[ "$t" -gt  "$y" ] || [ "$y" -gt "$u" ] ||  ( (( u += t + y )) ; echo "$u" )
 
