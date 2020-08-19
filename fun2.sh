@@ -5,7 +5,7 @@ Hello () {
 	   return 3
       }
 # Invoke your function
-Hello Ahmad samak
+Hello Ahmad amer
 # Capture value returnd by last command
 ret=$?
 echo "Return value is $ret"
